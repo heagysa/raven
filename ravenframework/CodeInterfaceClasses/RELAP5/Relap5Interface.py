@@ -40,6 +40,7 @@ class Relap5(CodeInterfaceBase):
       @ Out, None
     """
     self.tripControlVariables = {}
+    self._writeCSV = True
     self.detVars = [] # in case of DET
     index = self._findInputFileIndex(oriInputFiles)
     parser = RELAPparser.RELAPparser(oriInputFiles[index].getAbsFile())
